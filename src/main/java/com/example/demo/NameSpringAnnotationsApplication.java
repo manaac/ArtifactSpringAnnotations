@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.controller.MyController;
 import com.example.demo.controller.PizzaController;
+import com.example.demo.lazy.LazyLoader;
 import com.example.demo.repository.MyRepository;
 import com.example.demo.service.MyService;
 import com.example.demo.service.VegPizza;
@@ -32,6 +33,8 @@ public class NameSpringAnnotationsApplication {
 
         MyRepository myRepository = context.getBean(MyRepository.class);
         System.out.println(myRepository.hello());
+
+        LazyLoader lazyLoader = context.getBean(LazyLoader.class);
 
     }
 
