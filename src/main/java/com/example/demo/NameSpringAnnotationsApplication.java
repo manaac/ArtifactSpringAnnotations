@@ -1,13 +1,19 @@
 package com.example.demo;
 
+import com.example.demo.controller.PizzaController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class NameSpringAnnotationsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(NameSpringAnnotationsApplication.class, args);
-	}
+    public static void main(String[] args) {
+
+        var context = SpringApplication.run(NameSpringAnnotationsApplication.class, args);//this run method returns application context object. Here application context act as a spring IOC container
+//		PizzaController pizzaController = context.getBean(PizzaController.class);
+//		PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");
+        PizzaController pizzaController = (PizzaController) context.getBean("pizza");
+        System.out.println(pizzaController.getPizza());
+    }
 
 }
