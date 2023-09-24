@@ -1,6 +1,9 @@
 package com.example.demo;
 
+import com.example.demo.controller.MyController;
 import com.example.demo.controller.PizzaController;
+import com.example.demo.repository.MyRepository;
+import com.example.demo.service.MyService;
 import com.example.demo.service.VegPizza;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +23,16 @@ public class NameSpringAnnotationsApplication {
 //        VegPizza vegPizza = context.getBean(VegPizza.class);
         VegPizza vegPizza = (VegPizza) context.getBean("vegPizzaBean");
         System.out.println(vegPizza.getPizza());
+
+        MyController myController = context.getBean(MyController.class);
+        System.out.println(myController.hello());
+
+        MyService myService = context.getBean(MyService.class);
+        System.out.println(myService.hello());
+
+        MyRepository myRepository = context.getBean(MyRepository.class);
+        System.out.println(myRepository.hello());
+
     }
 
 }
