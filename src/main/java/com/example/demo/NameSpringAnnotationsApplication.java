@@ -4,6 +4,8 @@ import com.example.demo.controller.MyController;
 import com.example.demo.controller.PizzaController;
 import com.example.demo.lazy.LazyLoader;
 import com.example.demo.repository.MyRepository;
+import com.example.demo.scope.PrototypeBean;
+import com.example.demo.scope.SingletonBean;
 import com.example.demo.service.MyService;
 import com.example.demo.service.VegPizza;
 import org.springframework.boot.SpringApplication;
@@ -35,6 +37,25 @@ public class NameSpringAnnotationsApplication {
         System.out.println(myRepository.hello());
 
         LazyLoader lazyLoader = context.getBean(LazyLoader.class);
+
+        SingletonBean singletonBean1 = context.getBean(SingletonBean.class);
+        System.out.println(singletonBean1.hashCode());
+
+        SingletonBean singletonBean2 = context.getBean(SingletonBean.class);
+        System.out.println(singletonBean2.hashCode());
+
+        SingletonBean singletonBean3 = context.getBean(SingletonBean.class);
+        System.out.println(singletonBean3.hashCode());
+
+        PrototypeBean prototypeBean1 = context.getBean(PrototypeBean.class);
+        System.out.println(prototypeBean1.hashCode());
+
+        PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
+        System.out.println(prototypeBean2.hashCode());
+
+        PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
+        System.out.println(prototypeBean3.hashCode());
+
 
     }
 
