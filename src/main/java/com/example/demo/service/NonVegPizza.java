@@ -3,13 +3,9 @@ package com.example.demo.service;
 import org.springframework.stereotype.Component;
 
 @Component
-public class VegPizza implements Pizza{
-//    public String getVegPizza() {
-//        return "Veg Pizza!";
-//    }
-
+public class NonVegPizza implements Pizza {
     @Override
     public String getPizza() {
-        return "Veg Pizza!";
+        return "NonVeg Pizza!";
     }
 }
