@@ -33,12 +33,13 @@ public class PizzaController {
 //        this.vegPizza = pizza;
 //    }
 
-    public Pizza pizza;
-
     @Autowired
-    public PizzaController(@Qualifier("vegPizza") Pizza pizza1) {
-        this.pizza = pizza1;
-    }
+    public @Qualifier("nonVegPizza") Pizza pizza;
+
+//    @Autowired
+//    public PizzaController(@Qualifier("vegPizza") Pizza pizza1) {
+//        this.pizza = pizza1;
+//    }
 
     public String getPizza() {
         return pizza.getPizza();
