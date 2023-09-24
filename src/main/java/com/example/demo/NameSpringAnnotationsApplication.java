@@ -17,7 +17,8 @@ public class NameSpringAnnotationsApplication {
         PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");
         System.out.println(pizzaController.getPizza());
 
-        VegPizza vegPizza = context.getBean(VegPizza.class);
+//        VegPizza vegPizza = context.getBean(VegPizza.class);
+        VegPizza vegPizza = (VegPizza) context.getBean("vegPizzaBean");
         System.out.println(vegPizza.getPizza());
     }
 
