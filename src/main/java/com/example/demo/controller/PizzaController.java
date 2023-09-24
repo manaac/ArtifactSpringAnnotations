@@ -34,7 +34,7 @@ public class PizzaController {
 //    }
 
     @Autowired
-    public @Qualifier("nonVegPizza") Pizza pizza;
+    public Pizza pizza;
 
 //    @Autowired
 //    public PizzaController(@Qualifier("vegPizza") Pizza pizza1) {
