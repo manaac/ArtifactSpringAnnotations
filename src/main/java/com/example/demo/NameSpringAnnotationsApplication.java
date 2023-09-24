@@ -13,7 +13,8 @@ public class NameSpringAnnotationsApplication {
         var context = SpringApplication.run(NameSpringAnnotationsApplication.class, args);//this run method returns application context object. Here application context act as a spring IOC container
 //		PizzaController pizzaController = context.getBean(PizzaController.class);
 //		PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");
-        PizzaController pizzaController = (PizzaController) context.getBean("pizza");
+//      PizzaController pizzaController = (PizzaController) context.getBean("pizza");
+        PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");
         System.out.println(pizzaController.getPizza());
 
         VegPizza vegPizza = context.getBean(VegPizza.class);

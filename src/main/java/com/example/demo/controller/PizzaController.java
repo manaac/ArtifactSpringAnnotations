@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.security.PublicKey;
 
 //@Component //this can be called as context.getBean(PizzaController.class); or (PizzaController) context.getBean("pizzaController");
-@Component("pizza") //this can be called as (PizzaController) context.getBean("pizza");
+//@Component("pizza") //this can be called as (PizzaController) context.getBean("pizza");
 public class PizzaController {
 
     //Below method is to demo @Component
@@ -33,8 +33,12 @@ public class PizzaController {
 //        this.vegPizza = pizza;
 //    }
 
-    @Autowired
+    //    @Autowired
     public Pizza pizza;
+
+    public PizzaController(Pizza pizza1) {
+        this.pizza = pizza1;
+    }
 
 //    @Autowired
 //    public PizzaController(@Qualifier("vegPizza") Pizza pizza1) {
