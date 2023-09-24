@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.controller.PizzaController;
+import com.example.demo.service.VegPizza;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,6 +15,9 @@ public class NameSpringAnnotationsApplication {
 //		PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");
         PizzaController pizzaController = (PizzaController) context.getBean("pizza");
         System.out.println(pizzaController.getPizza());
+
+        VegPizza vegPizza = context.getBean(VegPizza.class);
+        System.out.println(vegPizza.getPizza());
     }
 
 }
