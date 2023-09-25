@@ -4,6 +4,7 @@ import com.example.demo.controller.MyController;
 import com.example.demo.controller.PizzaController;
 import com.example.demo.lazy.LazyLoader;
 import com.example.demo.propertysource.PropertySourceDemo;
+import com.example.demo.propertysource.PropertySourceDemoUsingEnvClass;
 import com.example.demo.repository.MyRepository;
 import com.example.demo.scope.PrototypeBean;
 import com.example.demo.scope.SingletonBean;
@@ -72,6 +73,13 @@ public class NameSpringAnnotationsApplication {
         System.out.println(propertySourceDemo.getPassword());
         System.out.println(propertySourceDemo.getAppName());
         System.out.println(propertySourceDemo.getAppDescription());
+
+        PropertySourceDemoUsingEnvClass propertySourceDemoUsingEnvClass = context.getBean(PropertySourceDemoUsingEnvClass.class);
+        System.out.println(propertySourceDemoUsingEnvClass.getHost());
+        System.out.println(propertySourceDemoUsingEnvClass.getEmail());
+        System.out.println(propertySourceDemoUsingEnvClass.getPassword());
+        System.out.println(propertySourceDemoUsingEnvClass.getAppName());
+        System.out.println(propertySourceDemoUsingEnvClass.getAppDescription());
     }
 
 }
