@@ -70,6 +70,8 @@ public class NameSpringAnnotationsApplication {
         System.out.println(propertySourceDemo.getHost());
         System.out.println(propertySourceDemo.getEmail());
         System.out.println(propertySourceDemo.getPassword());
+        System.out.println(propertySourceDemo.getAppName());
+        System.out.println(propertySourceDemo.getAppDescription());
     }
 
 }
