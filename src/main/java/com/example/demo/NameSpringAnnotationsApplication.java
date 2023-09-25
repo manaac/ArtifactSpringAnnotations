@@ -3,6 +3,7 @@ package com.example.demo;
 import com.example.demo.controller.MyController;
 import com.example.demo.controller.PizzaController;
 import com.example.demo.lazy.LazyLoader;
+import com.example.demo.propertysource.PropertySourceDemo;
 import com.example.demo.repository.MyRepository;
 import com.example.demo.scope.PrototypeBean;
 import com.example.demo.scope.SingletonBean;
@@ -65,6 +66,10 @@ public class NameSpringAnnotationsApplication {
         System.out.println(valueAnnotationDemo.getJavaHome());
         System.out.println(valueAnnotationDemo.getPathVariable());
 
+        PropertySourceDemo propertySourceDemo = context.getBean(PropertySourceDemo.class);
+        System.out.println(propertySourceDemo.getHost());
+        System.out.println(propertySourceDemo.getEmail());
+        System.out.println(propertySourceDemo.getPassword());
     }
 
 }
