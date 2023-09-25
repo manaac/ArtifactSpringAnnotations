@@ -8,6 +8,7 @@ import com.example.demo.scope.PrototypeBean;
 import com.example.demo.scope.SingletonBean;
 import com.example.demo.service.MyService;
 import com.example.demo.service.VegPizza;
+import com.example.demo.value.ValueAnnotationDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -56,6 +57,13 @@ public class NameSpringAnnotationsApplication {
         PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
         System.out.println(prototypeBean3.hashCode());
 
+        ValueAnnotationDemo valueAnnotationDemo = context.getBean(ValueAnnotationDemo.class);
+        System.out.println(valueAnnotationDemo.getDefaultName());
+        System.out.println(valueAnnotationDemo.getHost());
+        System.out.println(valueAnnotationDemo.getEmail());
+        System.out.println(valueAnnotationDemo.getPassword());
+        System.out.println(valueAnnotationDemo.getJavaHome());
+        System.out.println(valueAnnotationDemo.getPathVariable());
 
     }
 
